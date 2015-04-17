@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # end
 
   get 'church_introduce' => 'pages#church_introduce'
+  get 'page_test' => 'pages#page_test'
+
+  post 'login' => 'pages#login'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
