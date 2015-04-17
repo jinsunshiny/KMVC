@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   #attr_accessible :user_id, :password_digest, :nickname, :phone_num, :email, :address, :mission, :is_family
 
-  has_secure_password
-
   validates :user_id, :presence => true, uniqueness: true
   validates :password, :presence => true, confirmation: true, length: {minimum: 6}, on: :create
   validates :password, length: {minimum: 6}, on: :update, allow_blank: true
@@ -10,6 +8,8 @@ class User < ActiveRecord::Base
   #TODO : phone num regex 있어야함.
   validates :nickname, :presence => true, uniqueness: true
   validates :phone_num, :presence => true
+
+  has_secure_password
 
   #TODO : 주소 검색 api 붙여야됨 (회원가입, 회원 정보 업데이트 시에)
 
