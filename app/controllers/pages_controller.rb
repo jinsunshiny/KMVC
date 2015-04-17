@@ -8,6 +8,11 @@ class PagesController < ApplicationController
   end
 
   def page_test
+    logger.error 'session before'
+    if session[:user_id] != nil
+      logger.error 'session on'
+    end
+    logger.error 'session after'
   end
 
   def login
