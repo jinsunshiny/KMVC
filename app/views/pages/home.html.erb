@@ -1,17 +1,25 @@
-<head>
-  <h1>KMVC HOME!!!</h1>
-</head>
+<h1>KMVC HOME!!!</h1>
 
-<body>
-    <%= link_to '교회소개', church_introduce_path %>
-    <!-- TODO : Ajax로 로그인 완료 시 해당 부분 바뀌기 -->
-    <form action="login" method="post">
-      아이디:<br>
-      <input type="text" name="id">
-      <br>
-      비밀번호:<br>
-      <input type="password" name="password">
-      <br>
-      <input type="submit" value="확인">
-    </form>
-</body>
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= link_to '교회소개', church_introduce_path %><br/>
+      <%= link_to '교회소개', church_introduce_path %>
+    </div>
+    <div class="span6">
+      이미지 들어갈 곳.<br/>
+    </div>
+    <div class="span3">
+      <!-- TODO : Ajax로 로그인 완료 시 해당 부분 바뀌기 -->
+      <form action="login" method="post">
+        아이디:<br>
+        <input type="text" name="id">
+        <br>
+        비밀번호:<br>
+        <input type="password" name="password">
+        <br>
+        <input type="submit" value="확인" class="btn btn-default">
+      </form>
+    </div>
+  </div>
+</div>
